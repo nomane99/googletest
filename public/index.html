@@ -19,16 +19,57 @@
       </ul>
     </nav>
     <section class="hero">
-      <h1>Votre partenaire digital pour booster votre présence en ligne</h1>
-      <p>Création de sites web, SEO, marketing digital : confiez votre projet à des experts.</p>
-      <a href="#devis" class="cta-btn">Demander un devis</a>
+      <div class="hero-content">
+        <h1 class="fade-in">Votre partenaire digital pour booster votre présence en ligne</h1>
+        <p class="fade-in" style="animation-delay:0.2s">Création de sites web, SEO, marketing digital : confiez votre projet à des experts.</p>
+        <a href="#devis" class="cta-btn fade-in" style="animation-delay:0.4s">Demander un devis</a>
+      </div>
+      <div class="hero-illu fade-in" style="animation-delay:0.6s">
+        <img src="../assets/hero-illu.svg" alt="Illustration digitale" />
+      </div>
     </section>
   </header>
   <main>
-    <section id="services"></section>
-    <section id="portfolio"></section>
-    <section id="devis"></section>
-    <section id="contact"></section>
+    <section id="services" class="services-section">
+      <h2>Nos Services</h2>
+      <div class="services-list">
+        <div class="service-card fade-in-up"><div class="service-icon">🌐</div><h3>Création de sites web</h3><p>Sites vitrines, e-commerce, sur-mesure, performants et modernes.</p></div>
+        <div class="service-card fade-in-up" style="animation-delay:0.1s"><div class="service-icon">🔍</div><h3>SEO (Référencement naturel)</h3><p>Optimisation pour Google, contenu, technique et netlinking.</p></div>
+        <div class="service-card fade-in-up" style="animation-delay:0.2s"><div class="service-icon">📈</div><h3>Marketing digital</h3><p>Stratégie, publicité en ligne, réseaux sociaux, email marketing.</p></div>
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio-section">
+      <h2>Nos Réalisations</h2>
+      <div class="portfolio-list">
+        <div class="portfolio-card fade-in-up"><img src="../assets/portfolio1.jpg" alt="Projet 1"><h3>Site Vitrine Artiste</h3><p>Un site élégant pour présenter le travail d'un artiste peintre.</p></div>
+        <div class="portfolio-card fade-in-up" style="animation-delay:0.1s"><img src="../assets/portfolio2.jpg" alt="Projet 2"><h3>Boutique e-commerce</h3><p>Refonte complète d'une boutique en ligne avec paiement sécurisé.</p></div>
+        <div class="portfolio-card fade-in-up" style="animation-delay:0.2s"><img src="../assets/portfolio3.jpg" alt="Projet 3"><h3>Landing Page SEO</h3><p>Page d'atterrissage optimisée pour la génération de leads.</p></div>
+      </div>
+      <a href="portfolio.php" class="cta-btn" style="margin-top:2rem">Voir tout le portfolio</a>
+    </section>
+    <section id="devis" class="devis-section">
+      <h2>Demande de devis</h2>
+      <form class="devis-form fade-in-up" method="post" action="../inc/send_devis.php">
+        <div class="form-group"><label for="nom">Nom</label><input type="text" id="nom" name="nom" required></div>
+        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+        <div class="form-group"><label for="service">Service souhaité</label><select id="service" name="service" required><option value="">-- Choisir --</option><option value="siteweb">Création de site web</option><option value="seo">SEO</option><option value="marketing">Marketing digital</option></select></div>
+        <div class="form-group"><label for="budget">Budget estimé</label><select id="budget" name="budget" required><option value="">-- Choisir --</option><option value="<1000">Moins de 1000€</option><option value="1000-3000">1000€ - 3000€</option><option value=">3000">Plus de 3000€</option></select></div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <button type="submit" class="cta-btn">Envoyer la demande</button>
+      </form>
+    </section>
+    <section id="contact" class="contact-section">
+      <h2>Contactez-nous</h2>
+      <form class="contact-form fade-in-up" method="post" action="#">
+        <div class="form-group"><label for="nomc">Nom</label><input type="text" id="nomc" name="nomc" required></div>
+        <div class="form-group"><label for="emailc">Email</label><input type="email" id="emailc" name="emailc" required></div>
+        <div class="form-group"><label for="messagec">Message</label><textarea id="messagec" name="messagec" rows="5" required></textarea></div>
+        <button type="submit" class="cta-btn">Envoyer</button>
+      </form>
+      <div class="map-container fade-in-up" style="animation-delay:0.2s">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9999999999995!2d2.294481315674!3d48.8583700792876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fddf1e1e1e1%3A0x1e1e1e1e1e1e1e1e!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr" width="100%" height="300" style="border:0; border-radius:12px; margin-top:2rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
   </main>
   <footer>
     <p>&copy; 2024 sDigitalWeb. Tous droits réservés.</p>
