@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redirection…</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting…</title>
 
   <style>
-    /* Mise en page plein écran */
+    /* Full-screen layout */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background: #0d1117;         /* fond sombre */
+      background: #0d1117;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
       font-family: Arial, sans-serif;
+      color: #ffffff;
     }
     .loader {
       text-align: center;
     }
-    /* Cercle animé */
     .spinner {
       margin: 0 auto 1rem;
       width: 60px;
@@ -37,10 +36,10 @@
   </style>
 
   <script>
-    // Redirection après 2 secondes
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        window.location.href = "https://google.com; // <-- remplace par ta destination
+    // Redirect exactly 2 seconds after page load
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(function () {
+        window.location.href = "https://example.com"; // <-- change to your target URL
       }, 2000);
     });
   </script>
@@ -48,7 +47,7 @@
 <body>
   <div class="loader">
     <div class="spinner"></div>
-    <p>Chargement… Veuillez patienter</p>
+    <p>Loading… You will be redirected shortly.</p>
   </div>
 </body>
 </html>
