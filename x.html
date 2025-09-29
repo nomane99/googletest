@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirection…</title>
+
+  <style>
+    /* Mise en page plein écran */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: #0d1117;         /* fond sombre */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    .loader {
+      text-align: center;
+    }
+    /* Cercle animé */
+    .spinner {
+      margin: 0 auto 1rem;
+      width: 60px;
+      height: 60px;
+      border: 6px solid #444;
+      border-top-color: #1f9fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
+  <script>
+    // Redirection après 2 secondes
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        window.location.href = "https://google.com; // <-- remplace par ta destination
+      }, 2000);
+    });
+  </script>
+</head>
+<body>
+  <div class="loader">
+    <div class="spinner"></div>
+    <p>Chargement… Veuillez patienter</p>
+  </div>
+</body>
+</html>
